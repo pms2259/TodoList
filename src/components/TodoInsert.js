@@ -10,7 +10,7 @@ const TodoInsert = ({ onInsertToggle, onInsertTodo }) => {
     };
 
     const onSubmit = (e) => {
-        e.prevteDefault();
+        e.preventDefault();
         onInsertTodo(value);
         setValue("");
         onInsertToggle();
