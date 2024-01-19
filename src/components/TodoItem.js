@@ -16,9 +16,9 @@ const TodoItem = ({ todo, onCheckToggle }) => {
                     />
                 ) : (
                     <MdCheckBoxOutlineBlank
-                    onClick={() => {
-                        onCheckToggle(id);
-                    }}
+                        onClick={() => {
+                            onCheckToggle(id);
+                        }}
                     />
                 )}
                 <div className='text'>{text}</div>
