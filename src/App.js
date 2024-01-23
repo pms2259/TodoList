@@ -58,6 +58,11 @@ const App = () => {
     setSelectedTodo(todo);
   }
 
+  const onRemove = id => {
+    onInsertToggle();
+    setTodos(todos => todos.filter(todo => todo.id !== id));
+  }
+
   return (
     <Template todoLength={todos.length}>
       <TodoList
@@ -74,6 +79,7 @@ const App = () => {
           selectedTodo={selectedTodo}
           onInsertToggle={onInsertToggle}
           onInsertTodo={onInsertTodo}
+          onRemove={onRemove}
         />
       )}
     </Template>
